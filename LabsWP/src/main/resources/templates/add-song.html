@@ -11,7 +11,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <h2 th:text="${song != null ? 'Edit Song' : 'Add New Song'}"></h2>
-            <form th:action="${song != null ? @{/songs/edit/{id}(id=${song.id})} : @{/songs/add}}" method="POST">
+            <form th:action="${song != null ? '/songs/edit-form/' + song.id : '/songs/add'}" method="POST">
                 <!-- Hidden field for ID (only used for editing) -->
                 <input type="hidden" name="id" th:value="${song != null ? song.id : ''}">
 

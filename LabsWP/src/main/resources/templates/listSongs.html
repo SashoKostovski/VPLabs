@@ -13,12 +13,7 @@
 <body>
 <header>
     <h1>Welcome to My Music Store</h1>
-    <table>
-        <tbody>
-        <tr>Work</tr>
-        <tr th:each="album : ${albums}" th:value="${album.id}" th:text="${album.name}">
-        </tbody>
-    </table>
+
 </header>
 <main>
     <h2>Available Songs:</h2>
@@ -41,7 +36,7 @@
             <td th:text="${song.album != null ? song.album.name : 'N/A'}">Album Name</td>
             <td>
 
-                <a th:href="@{/songs/edit/{id}(id=${song.id})}">Edit</a>
+                <a th:href="@{/songs/edit-form/{id}(id=${song.id})}">Edit</a>
                 <form th:action="@{/songs/delete/{id}(id=${song.id})}" method="post" style="display:inline;">
                     <button type="submit">Delete</button>
                 </form>

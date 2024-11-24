@@ -57,7 +57,7 @@ public class SongController {
         return "redirect:/songs";
     }
 
-    @GetMapping("/edit/{songId}")
+    @GetMapping("/edit-form/{songId}")
     public String editSong(@PathVariable Long songId, Model model) {
         Song song = songService.findById(songId).orElse(null);
         if (song == null) {
@@ -65,10 +65,10 @@ public class SongController {
         }
         model.addAttribute("song", song);
         model.addAttribute("albums", albumService.findAll());
-        return "editSong";
+        return "add-song";
     }
 
-    @PostMapping("/edit/{songId}")
+    @PostMapping("/edit-form/{songId}")
     public String updateSong(@PathVariable Long songId,
                              @RequestParam String title,
                              @RequestParam String trackId,
