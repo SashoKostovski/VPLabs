@@ -19,11 +19,11 @@ public class AlbumRepository {
     public Optional<Album> findById(Long id) {
         return DataHolder.albumList.stream()
                 .filter(album -> album.getId().equals(id))
-                .findFirst(); // Find album by ID
+                .findFirst();
     }
 
     public Album save(Album album) {
-        DataHolder.albumList.add(album); // Add a new album
+        DataHolder.albumList.add(album);
         return album;
     }
 

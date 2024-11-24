@@ -23,6 +23,6 @@ public class AlbumServiceImpl implements AlbumService {
 
     @Override
     public Optional<Album> findById(Long id) {
-        return albumRepository.findById(id); // Delegate to repository
+        return albumRepository.findById(id);
     }
 }

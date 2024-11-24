@@ -46,16 +46,16 @@ public class DataHolder {
         albumList.add(new Album(idCounter++, "Acoustic Sessions", "Acoustic", "2015"));
 
 
-        songList.get(0).setAlbum(albumList.get(0)); // "Greatest Hits"
-        songList.get(1).setAlbum(albumList.get(0)); // "Greatest Hits"
-        songList.get(2).setAlbum(albumList.get(1)); // "Pop Classics"
-        songList.get(3).setAlbum(albumList.get(2)); // "Jazz Essentials"
-        songList.get(4).setAlbum(albumList.get(3)); // "Electronic Vibes"
+        songList.get(0).setAlbum(albumList.get(0));
+        songList.get(1).setAlbum(albumList.get(0));
+        songList.get(2).setAlbum(albumList.get(1));
+        songList.get(3).setAlbum(albumList.get(2));
+        songList.get(4).setAlbum(albumList.get(3));
 
-        // Assign songs to albums
-        albumList.get(0).setSongs(List.of(songList.get(0), songList.get(1))); // Add songs to "Greatest Hits"
-        albumList.get(1).setSongs(List.of(songList.get(2))); // Add song to "Pop Classics"
-        albumList.get(2).setSongs(List.of(songList.get(3))); // Add song to "Jazz Essentials"
+
+        albumList.get(0).setSongs(List.of(songList.get(0), songList.get(1)));
+        albumList.get(1).setSongs(List.of(songList.get(2)));
+        albumList.get(2).setSongs(List.of(songList.get(3)));
         albumList.get(3).setSongs(List.of(songList.get(4)));
     }
 }

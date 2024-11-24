@@ -31,10 +31,10 @@ public class SongRepository {
     }
 
     public void save(Song song) {
-        // Check if the song already exists; if so, update it
+
         Optional<Song> existingSong = findById(song.getId());
-        existingSong.ifPresent(DataHolder.songList::remove); // Remove existing song if found
-        DataHolder.songList.add(song); // Add the new or updated song to DataHolder
+        existingSong.ifPresent(DataHolder.songList::remove);
+        DataHolder.songList.add(song);
     }
 
     public Artist addArtistToSong(Song song, Artist artist) {

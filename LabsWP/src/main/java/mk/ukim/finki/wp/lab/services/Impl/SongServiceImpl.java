@@ -47,7 +47,7 @@ public class SongServiceImpl implements SongService {
 
     @Override
     public Optional<Song> findById(Long id) {
-        return songRepository.findById(id); // Delegate to repository
+        return songRepository.findById(id);
     }
 
     @Override
@@ -60,7 +60,7 @@ public class SongServiceImpl implements SongService {
     @Override
     public Song save(String title, String trackId, String genre, int releaseYear, Album album) {
         Song song = new Song(trackId, title, genre, releaseYear, album);
-        songRepository.save(song); // Save the song to the repository
+        songRepository.save(song);
         return song;
     }
 
@@ -78,6 +78,6 @@ public class SongServiceImpl implements SongService {
 
     @Override
     public void delete(Long id) {
-        songRepository.deleteById(id); // Delegate to repository
+        songRepository.deleteById(id);
     }
 }

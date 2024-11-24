@@ -33,7 +33,6 @@
 </header>
 <section>
     <h2>Select artist:</h2>
-    <!-- Make changes to this code to dynamically display radio buttons for each artist as in the example -->
     <form th:method="POST" th:action="@{/songs/song-details}">
         <input type="hidden" name="trackId" th:value="${trackId}" />
         <div th:each="artist : ${artistList}">
@@ -49,7 +48,6 @@
 <aside>
     <table>
         <tr>
-            <!-- change to show selected trackId -->
             <td><b>Track Id</b></td>
             <td th:text="${trackId}">2</td>
         </tr>
